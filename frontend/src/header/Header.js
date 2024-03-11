@@ -12,29 +12,29 @@ const Header = () => {
     return (
     <div> 
         <div className ="header">
-            <Link className="link" to={`/feed`}>
-                <img src={logo} alt="logo" className="logo"/>
+            <Link className="linkHeader" to={`/feed`}>
+                <img src={logo} alt="logo" className="logoHeader"/>
             </Link>
 
-            <Link className="link" to={`/restaurants`}>
-                <h1 className="restaurants">Restaurantes</h1>
+            <Link className="linkHeader" to={`/restaurants`}>
+                <h1 className="restaurantsHeader">Restaurantes</h1>
             </Link>
 
-            <h1 className="users">Usuários</h1>
-            <h1 className="lists">Listas</h1>
-            <h1 className="forum">Fórum</h1>
+            <h1 className="usersHeader">Usuários</h1>
+            <h1 className="listsHeader">Listas</h1>
+            <h1 className="forumHeader">Fórum</h1>
 
             <input 
                 type="text" 
                 placeholder="Ache seus pontos gastronômicos favoritos" 
                 value={restaurant} 
                 onChange={(e) => setRestaurant(e.target.value)} 
-                className="input-field"
+                className="inputFieldHeader"
             />
             
-            <img src={searchicon} alt="searchicon" className="searchicon"/>
+            <img src={searchicon} alt="searchicon" className="searchiconHeader"/>
 
-            <img src={noprofileimage} alt="noprofileimage" className="noprofileimage"/>
+            <img src={noprofileimage} alt="noprofileimage" className="noprofileimageHeader"/>
         </div>
     </div>
     );
