@@ -15,42 +15,42 @@ const Feed = () => {
                 <Header />
             </div>
 
-            <h1 className="title">Reviews em Alta</h1>
+            <h1 className="titleFeed">Reviews em Alta</h1>
             {reviews.length === 0 && (
-                <div className="content">
-                    <h1 className= "noDataReview">AINDA NÃO EXISTEM REVIEWS CADASTRADAS NO SITE</h1>
+                <div className="contentFeed">
+                    <h1 className= "noDataReviewFeed">AINDA NÃO EXISTEM REVIEWS CADASTRADAS NO SITE</h1>
                 </div>
             )}
             {reviews.length > 0 && (
-                <div className="content">
-                    <img src={triangle} alt="triangle" className="leftTriangle"/>
-                    <img src={triangle} alt="triangle" className="rightTriangle"/>
+                <div className="contentFeed">
+                    <img src={triangle} alt="triangle" className="leftTriangleFeed"/>
+                    <img src={triangle} alt="triangle" className="rightTriangleFeed"/>
                 </div>
             )}
 
-            <h1 className="title">Restaurantes</h1>
+            <h1 className="titleFeed">Restaurantes</h1>
             {restaurants.length === 0 && (
-                <div className="content">
-                    <h1 className= "noDataRestaurant">AINDA NÃO EXISTEM RESTAURANTES CADASTRADOS NO SITE</h1>
+                <div className="contentFeed">
+                    <h1 className= "noDataRestaurantFeed">AINDA NÃO EXISTEM RESTAURANTES CADASTRADOS NO SITE</h1>
                 </div>
             )}
             {restaurants.length > 0 && (
-                <div className="content">
-                    <img src={triangle} alt="triangle" className="leftTriangle"/>
-                    <img src={triangle} alt="triangle" className="rightTriangle"/>
+                <div className="contentFeed">
+                    <img src={triangle} alt="triangle" className="leftTriangleFeed"/>
+                    <img src={triangle} alt="triangle" className="rightTriangleFeed"/>
                 </div>
             )}
 
-            <h1 className="title">Reviews</h1>
+            <h1 className="titleFeed">Reviews</h1>
             {reviews.length === 0 && (
-                <div className="lastContent">
-                    <h1 className= "noDataReview">AINDA NÃO EXISTEM REVIEWS CADASTRADAS NO SITE</h1>
+                <div className="lastContentFeed">
+                    <h1 className= "noDataReviewFeed">AINDA NÃO EXISTEM REVIEWS CADASTRADAS NO SITE</h1>
                 </div>
             )}
             {reviews.length > 0 && (
-                <div className="lastContent">
-                    <img src={triangle} alt="triangle" className="leftTriangle"/>
-                    <img src={triangle} alt="triangle" className="rightTriangle"/>
+                <div className="lastContentFeed">
+                    <img src={triangle} alt="triangle" className="leftTriangleFeed"/>
+                    <img src={triangle} alt="triangle" className="rightTriangleFeed"/>
                 </div>
             )}
         </div>
