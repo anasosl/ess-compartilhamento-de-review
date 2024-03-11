@@ -9,7 +9,7 @@
   font-size: 16px;
 }
 
-.title{
+.titleFeed{
   width: 15%;
   height: 30px;
   margin-top: 4%;
@@ -22,7 +22,7 @@
   justify-content: center;
 }
 
-.content{
+.contentFeed{
   width: 100%;
   height: 150px;
   margin-top: 1.5%;
@@ -31,7 +31,7 @@
   justify-content: space-between;
 }
 
-.lastContent{
+.lastContentFeed{
   width: 100%;
   height: 150px;
   margin-top: 1.5%;
@@ -40,7 +40,7 @@
   justify-content: space-between;
 }
 
-.leftTriangle{
+.leftTriangleFeed{
   height: 70%;
   margin-top: 1%;
   margin-right: 82%;
@@ -51,14 +51,14 @@
   transform: rotate(180deg);
 }
 
-.rightTriangle{
+.rightTriangleFeed{
   height: 70%;
   margin-top: 2%;
   margin-bottom: 5%;
   background-color: #F09682;
 }
 
-.noDataReview{
+.noDataReviewFeed{
   width: 40%;
   height: 15%;
   margin-top: 4%;
@@ -72,7 +72,7 @@
   justify-content: center;
 }
 
-.noDataRestaurant{
+.noDataRestaurantFeed{
   width: 40%;
   height: 15%;
   margin-top: 4%;
