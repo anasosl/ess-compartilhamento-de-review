@@ -78,3 +78,8 @@
   width: 150px;
   display: block;
 }
+
+.reviewTitleFeed{
+  width:15%;
+  border-radius: 80px;
+}
