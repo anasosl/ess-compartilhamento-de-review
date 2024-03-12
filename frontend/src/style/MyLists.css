@@ -1,20 +1,18 @@
 /* Estilos para MyLists */
 
-
-
-.NovaLista {
+.minhas-listas {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    text-align: center; /* Centraliza o texto horizontalmente */
+    text-align: center; 
     margin-top: 170px;
 }
 
 #all-lists {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza os elementos horizontalmente */
-    align-items: center; /* Centraliza os elementos verticalmente */
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -24,7 +22,7 @@
     border-radius: 5px;
     margin-right: 10px;
     margin-bottom: 10px;
-    width: calc(33.333% - 10px); /* 3 colunas com espaçamento */
+    width: calc(33.333% - 10px);
 }
 
 .list-item h3 {
@@ -45,5 +43,5 @@
     cursor: pointer;
     text-decoration: none;
     width: fit-content;
-    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    margin: 0 auto;
 }
