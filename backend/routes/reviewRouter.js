@@ -7,6 +7,8 @@ router.get('/:idrest', ReviewController.review_show)
 
 router.get('/:idrest/:iduser', ReviewController.review_get)
 
+router.get('/', ReviewController.registered_reviews)
+
 router.post('/:idrest/:iduser/create', ReviewController.review_post)
 
 router.put('/:idrest/:iduser/edit', ReviewController.review_edit)
