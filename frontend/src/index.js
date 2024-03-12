@@ -23,6 +23,9 @@ import Following from './routes/Following'
 import Feed from './routes/feed/Feed'
 import SearchResult from './routes/search/SearchResult'
 
+import MyLists from './routes/lists/MyLists';
+import ListCreate from './routes/lists/ListCreate';
+
 const router = createBrowserRouter([
   {
     path:"/",
@@ -100,6 +103,19 @@ const router = createBrowserRouter([
       {
         path: "/users/edit/:id",
         element: <UserEdit />
+      }
+    ]
+  },
+  {
+    path:"/",
+    children:[
+      {
+        path: "/lists/create",
+        element: <ListCreate />,
+      },
+      {
+        path: "/lists",
+        element: <MyLists/>
       }
     ]
   }

@@ -1,0 +1,55 @@
+.NovaLista {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#formlist form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#formlist form div {
+    margin-bottom: 15px;
+}
+
+#formlist form label {
+    display: block;
+    font-weight: bold;
+}
+
+#formlist form span {
+    color: red;
+}
+
+#formlist form input[type="text"],
+#formlist form select,
+#formlist form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#formlist form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#formlist form button[type="button"] {
+    background-color: #aaa;
+}
+
+#formlist form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#formlist form button[type="button"]:hover {
+    background-color: #ff3333; /* Altere para a cor vermelha desejada */
+}
