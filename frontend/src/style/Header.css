@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-around;
     align-content: center;
+    text-decoration: none !important;
 }
 
 .logo{
@@ -25,8 +26,9 @@
     margin-right: 70px;
 }
 
-.link{
+.linkHeader{
     background-color: #B92727;
+    text-decoration: none;
 }
 
 .restaurants{
@@ -36,9 +38,13 @@
     background-color: #B92727;
     color: #F0E7DD;
     transition: color 0.3s;
+    border: none;
 }
 
-.restaurants:hover{
+.restaurants:hover,
+.users:hover,
+.lists:hover,
+.forum:hover{
     color: #2c2b2b;
 }
 
