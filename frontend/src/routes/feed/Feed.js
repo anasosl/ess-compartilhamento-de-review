@@ -2,7 +2,6 @@ import React from "react"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 import '../../style/Feed.css'
-import Header from "../../header/Header.js";
 const API_BASE = "http://localhost:3001"
 
 const Feed = () => {
@@ -22,6 +21,12 @@ const Feed = () => {
                 console.error("Error: ", err);
                 setError(err.message);
             });
+
+        GetMostLikedReviews()
+            .catch(err => {
+                console.error("Error> ", err);
+                setError(err.message);
+            });
     }, []); 
 
     const GetRandomRestaurants = async () => {
@@ -33,8 +38,17 @@ const Feed = () => {
         setRandomRestaurants(data);
     };
 
-    const GetRandomReviews = async () => {
+    const GetMostLikedReviews = async () => {
         const response = await fetch(API_BASE + "/feed/random_reviews");
+        if (!response.ok) {
+            throw new Error("Failed to fetch");
+        }
+        const data = await response.json();
+        setRandomReviews(data);
+    };
+
+    const GetRandomReviews = async () => {
+        const response = await fetch(API_BASE + "/feed/most_liked_reviews");
         if (!response.ok) {
             throw new Error("Failed to fetch");
         }
@@ -44,10 +58,6 @@ const Feed = () => {
 
     return (
         <div>
-            <div className="header">
-                <Header />
-            </div>
-
             <h1 className="titleFeed">Reviews em Alta</h1>
             {reviews.length === 0 && (
                 <div className="noContentFeed">
@@ -56,7 +66,9 @@ const Feed = () => {
             )}
             {reviews.length > 0 && (
                 <div className="contentFeed">
-                    
+                    {reviews.map((review, index) => (
+                        <h2 key={index} className="reviewTitleFeed">{review.title}</h2>
+                    ))}
                 </div>
             )}                               
 
@@ -84,6 +96,9 @@ const Feed = () => {
             )}
             {reviews.length > 0 && (
                 <div className="contentFeed">
+                    {reviews.map((review, index) => (
+                        <h2 key={index} className="reviewTitleFeed">{review.title}</h2>
+                    ))}
                 </div>
             )}
     </div>
