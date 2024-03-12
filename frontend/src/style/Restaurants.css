@@ -34,6 +34,22 @@
     margin: 40px auto;
 }
 
+.noDataRestaurant{
+  width: 60%;
+  height: 20%;
+  margin-top: 15%;
+  margin-left: 18%;
+  margin-bottom: 20%;
+  padding: 2%;
+  color: #FFFFFF;
+  background-color: #EA1313;
+  border-radius: 10px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
 .restaurant-preview{
     padding: 10px 16px;
     border-top: 6px solid #B92727;
