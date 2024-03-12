@@ -1,22 +1,28 @@
-import React from "react"
-import { useState } from "react"
-import { Link } from "react-router-dom";
-import '../../style/Header.css'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; // import useNavigate instead of useHistory
+import '../../style/Header.css';
 import logo from "../../assets/logo.svg";
 import noprofileimage from "../../assets/noprofileimage.png";
 import searchicon from "../../assets/searchicon.png";
 
 const Header = () => {
     const [restaurant, setRestaurant] = useState("");
+    const navigate = useNavigate(); // use useNavigate hook here
+
+    const handleSearch = () => {
+        navigate("/search/result", { state: { restaurantName: restaurant } }); // updated to use navigate
+    };
+
+    // Rest of your component remains the same
 
     return (
     <div> 
         <div className ="header">
-            <Link className="link" to={`/feed`}>
+            <Link className="linkHeader" to={`/feed`}>
                 <img src={logo} alt="logo" className="logo"/>
             </Link>
-
-            <Link className="link" to={`/restaurants`}>
+            
+            <Link className="linkHeader" to={`/restaurants`}>
                 <h1 className="restaurants">Restaurantes</h1>
             </Link>
 
@@ -33,10 +39,17 @@ const Header = () => {
                     className="search-field"
                 />
                 
-                <img src={searchicon} alt="searchicon" className="searchicon"/>
+                <img
+                    src={searchicon}
+                    alt="searchicon"
+                    className="searchicon"
+                    onClick={handleSearch}
+                />
+
             </div>
 
             <img src={noprofileimage} alt="noprofileimage" className="noprofileimage"/>
+
         </div>
     </div>
     );
