@@ -22,7 +22,8 @@
   justify-content: center;
 }
 
-.contentFeed{
+.noContentFeed,
+.noLastContentFeed{
   width: 100%;
   height: 150px;
   margin-top: 1.5%;
@@ -31,31 +32,18 @@
   justify-content: space-between;
 }
 
+.contentFeed,
 .lastContentFeed{
   width: 100%;
   height: 150px;
   margin-top: 1.5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
   background-color: #F09682;
   display: flex;
-  justify-content: space-between;
-}
-
-.leftTriangleFeed{
-  height: 70%;
-  margin-top: 1%;
-  margin-right: 82%;
-  margin-bottom: 5%;
-  position: relative;
-  left: -5%; 
-  background-color: #F09682;
-  transform: rotate(180deg);
-}
-
-.rightTriangleFeed{
-  height: 70%;
-  margin-top: 2%;
-  margin-bottom: 5%;
-  background-color: #F09682;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  align-items: center;
 }
 
 .noDataReviewFeed{
@@ -84,4 +72,9 @@
   font-size: 17px;
   display: flex;
   justify-content: center;
+}
+
+.restaurantImageFeed {
+  width: 150px;
+  display: block;
 }
