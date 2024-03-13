@@ -167,10 +167,8 @@ const ReviewsRestaurant = () => {
                                         })}
                                     </div>
                                     <p>Por: {usernames[review.user]}</p>
-                                    {review.user == idUserLogin ? (
+                                    {(review.user == idUserLogin) && (
                                         <p>(você)</p>
-                                    ):(
-                                        <p></p>
                                     )}
                             </div>
                         </div>
