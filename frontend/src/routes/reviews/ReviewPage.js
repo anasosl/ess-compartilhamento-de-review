@@ -28,7 +28,7 @@ const ReviewPage = () => {
         try {
           const decoded = jwtDecode(token);
           const userID = decoded.userId;
-          setIdUserLogin(userID);
+          setIsOwner(iduser === userID)
         } catch (error) {
           console.error("Failed to decode token", error);
         }
