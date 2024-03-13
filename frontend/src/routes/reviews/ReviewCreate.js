@@ -18,23 +18,23 @@ const ReviewCreate = () => {
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
 
-    const [rating, setRating] = useState('');
+    const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(null);
     const [totalStars, setTotalStars] = useState(5);
 
-    const [sabor, setSabor] = useState('');
+    const [sabor, setSabor] = useState(0);
     const [hoverS, setHoverS] = useState(null);
     const [totalStarsS, setTotalStarsS] = useState(5);
 
-    const [atendimento, setAtendimento] = useState('');
+    const [atendimento, setAtendimento] = useState(0);
     const [hoverA, setHoverA] = useState(null);
     const [totalStarsA, setTotalStarsA] = useState(5);
 
-    const [tempoDeEspera, setTempoDeEspera] = useState('');
+    const [tempoDeEspera, setTempoDeEspera] = useState(0);
     const [hoverT, setHoverT] = useState(null);
     const [totalStarsT, setTotalStarsT] = useState(5);
 
-    const [preco, setPreco] = useState('');
+    const [preco, setPreco] = useState(0);
     const [hoverP, setHoverP] = useState(null);
     const [totalStarsP, setTotalStarsP] = useState(5);
 
@@ -111,7 +111,7 @@ const ReviewCreate = () => {
                             name="rating"
                             value={currentRating}
                             onChange={() => setRating(currentRating)}
-                            required
+                            required    
                         />
                         <span
                             className="star"
