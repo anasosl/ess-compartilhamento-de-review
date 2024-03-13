@@ -10,7 +10,6 @@ import { jwtDecode } from "jwt-decode";
 
 const API_BASE = "http://localhost:3001"
 
-
 const RestaurantProfile = () => {
     const [restaurant, setRestaurant] = useState(null);
     const { id } = useParams()
