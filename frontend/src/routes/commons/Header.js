@@ -94,6 +94,9 @@ const Header = () => {
                     onClick={handleSearch}
                 />
 
+
+                <img src={searchicon} alt="searchicon" className="searchicon"/>
+                  
             </div>
                 {user === null ? (
                     <img src={noprofileimage} alt="noprofileimage" className="noprofileimage"/>
