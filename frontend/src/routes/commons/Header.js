@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import '../../style/Header.css'
 import logo from "../../assets/logo.svg";
-import noprofileimage from "../../assets/noprofileimage.png";
+import noprofileimage from "../../images/noprofileimage.png";
 import searchicon from "../../assets/searchicon.png";
 
 const API_BASE = "http://localhost:3001"
@@ -23,15 +23,17 @@ function getUserIdFromToken() {
 }
 
 function renderImage(user){
-    if(user.profileImage){
+    if(user.profileImage !== undefined){
         const image = `${API_BASE}/${user.profileImage}`
         return image
     }
+    console.log("oiii")
     return noprofileimage
 }
 
 const Header = () => {
     let navigate = useNavigate()
+    const [error, setError] = useState(null)
     const [restaurant, setRestaurant] = useState("");
     const loggedUserId = getUserIdFromToken()
     const [user, setUser] = useState(null);
@@ -42,6 +44,9 @@ const Header = () => {
                 response.json().then(data =>{
                     setUser(data)
                 })
+            }).catch(err => {
+                console.error("Error: ", err);
+                setError(err.message);
             })
     }, []);
 
