@@ -179,17 +179,19 @@ const RestaurantProfile = () => {
                                             <h2 id="restaurant-name">{ restaurant.name }</h2>
                                             <p className="restaurant-atribute" data-cy="typeOfFood"> Tipo de comida: {restaurant.typeOfFood}</p>
                                             { restaurant.site && <a className="restaurant-atribute" id="restaurant-site" href={restaurant.site}> Site oficial </a>}
-                                            {numRatings !== 1 ? (
-                                                <div>
-                                                    {numRatings} Avaliações
-                                                </div>
-                                            ) : (
-                                                <div>
-                                                    {numRatings} Avaliação
-                                                </div>
-                                                
-                                            )}
-                                            <div>
+                                            <div id ="avg-rating">
+                                                {numRatings !== 1 ? (
+                                                    <div>
+                                                        {numRatings} Avaliações
+                                                    </div>
+                                                ) : (
+                                                    <div>
+                                                        {numRatings} Avaliação
+                                                    </div>
+                                                    
+                                                )}
+
+
                                                 {[...Array(5)].map((star, index) => {
                                                     const starValue = index + 1;
 
@@ -202,7 +204,10 @@ const RestaurantProfile = () => {
                                                     </span>
                                                     );
                                                 })}
+                                            
                                             </div>
+                                            
+                                            
                                         </div>
                                     </div>
 

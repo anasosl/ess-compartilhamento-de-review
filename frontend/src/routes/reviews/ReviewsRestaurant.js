@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from 'axios';
-
 import '../../style/Restaurants.css';
-
+import NoImg from "../../assets/almocin_logo_red.png"
 import { jwtDecode } from "jwt-decode";
 
 const API_BASE = "http://localhost:3001";
@@ -39,11 +38,6 @@ const ReviewsRestaurant = () => {
         };
         getUserInfoFromToken()
     }, []);
-
-    let user = {
-        name: "pedro",
-        id: "65d51e36c3b06ec45cdd2ac8"
-    }
 
     useEffect(() => {
         const getRestaurant = async () => {
@@ -119,12 +113,11 @@ const ReviewsRestaurant = () => {
 
     return (
         <div>
-            {restaurant && (
-            <div className="reviews-page">
-
+        {restaurant && (
+            <div className="restaurants-page"> 
             <div className="restaurant">
-                <p>{restaurant.profileImage}</p>
-                <p>{restaurant.name}</p>
+               
+                <h1>{restaurant.name}</h1>
                 <p>Nota média:</p>
                 <div>
                             {[...Array(5)].map((star, index) => {
@@ -133,7 +126,7 @@ const ReviewsRestaurant = () => {
                                 return (
                                 <span
                                     key={index}
-                                    style={{ color: starValue <= avg ? '#ffc107' : '#e4e5e9' }}
+                                    style={{ color: starValue <= avg ? '#ffc107' : '#524d39' }}
                                 >
                                     &#9733;
                                 </span>
@@ -142,8 +135,8 @@ const ReviewsRestaurant = () => {
                         </div>
             
             </div>
-
-            {reviews.length !== 1 ? (
+            <div className="restaurant-list"> 
+            <h2 className="category"> {reviews.length !== 1 ? (
                 <div>
                     {reviews.length} Reviews
                 </div>
@@ -152,48 +145,45 @@ const ReviewsRestaurant = () => {
                     {reviews.length} Review
                 </div>
                 
-            )}
-
-            <div className="review-list">
-                {error && <p>{error}</p>}
-
+            )}</h2>
                 {reviews.map(review => (
-                    <div className="review-preview" key={review.id}>
+                    <div className="restaurant-preview"> 
                         <div id="img-and-description">
-                            <div id="preview-description">
-                                <h2>{review.title}</h2>
-                                <div>
-                                    {[...Array(5)].map((star, index) => {
-                                        const starValue = index + 1;
 
-                                        return (
-                                        <span
-                                            key={index}
-                                            style={{ color: starValue <= review.rating ? '#ffc107' : '#e4e5e9' }}
-                                        >
-                                            &#9733;
-                                        </span>
-                                        );
-                                    })}
-                                </div>
-                                <p>{usernames[review.user]}</p>
-                                {review.user == idUserLogin ? (
-                                    <p>(você)</p>
-                                ):(
-                                    <p></p>
-                                )}
+                            <div id = "preview-description">
+                                <h2>{review.title}</h2>
+                                    <div>
+                                        {[...Array(5)].map((star, index) => {
+                                            const starValue = index + 1;
+
+                                            return (
+                                            <span
+                                                key={index}
+                                                style={{ color: starValue <= review.rating ? '#ffc107' : '#524d39' }}
+                                            >
+                                                &#9733;
+                                            </span>
+                                            );
+                                        })}
+                                    </div>
+                                    <p>Por: {usernames[review.user]}</p>
+                                    {review.user == idUserLogin ? (
+                                        <p>(você)</p>
+                                    ):(
+                                        <p></p>
+                                    )}
                             </div>
                         </div>
-                        <Link className="link" to={`/reviews/${review.restaurant}/${review.user}`}>
+                        <Link className="restaurant-link-button" to={`/reviews/${review.restaurant}/${review.user}`}>
                             <div className="view-button">
                                 <p>Ver Mais...</p>
                             </div>
                         </Link>
                     </div>
                 ))}
-
             </div>
         </div>
+        
         )}
         <div>
             <Link id="return" to={'/restaurants/'+idrest}>

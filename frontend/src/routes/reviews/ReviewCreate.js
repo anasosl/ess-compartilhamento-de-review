@@ -94,7 +94,8 @@ const ReviewCreate = () => {
         <div>
             <form onSubmit={createNewReview}>
                 <p>Título</p>
-                <input type="text" placeholder="Coxinha Boa" 
+                <input type="text" placeholder="Coxinha Boa"
+                    id = "title" 
                     value={title} 
                     onChange={ev => setTitle(ev.target.value)}
                     required
@@ -109,6 +110,7 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="rating"
+                            id = "rating" 
                             value={currentRating}
                             onChange={() => setRating(currentRating)}
                             required    
@@ -135,6 +137,7 @@ const ReviewCreate = () => {
                 placeholder="Amei a coxinha..." 
                 wrap = "soft"
                 name = "text"
+                id = "text" 
                 required
                 value={text} onChange={ev => setText(ev.target.value)}
                 />
@@ -148,6 +151,7 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="sabor"
+                            id = "sabor" 
                             value={currentSabor}
                             onChange={() => setSabor(currentSabor)}
                         />
@@ -175,6 +179,7 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="atendimento"
+                            id = "atendimento" 
                             value={currentAtendimento}
                             onChange={() => setAtendimento(currentAtendimento)}
                         />
@@ -202,6 +207,7 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="tempoDeEspera"
+                            id = "tempoDeEspera" 
                             value={currentTempoDeEspera}
                             onChange={() => setTempoDeEspera(currentTempoDeEspera)}
                         />
@@ -229,6 +235,7 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="preco"
+                            id = "preco" 
                             value={currentPreco}
                             onChange={() => setPreco(currentPreco)}
                         />
