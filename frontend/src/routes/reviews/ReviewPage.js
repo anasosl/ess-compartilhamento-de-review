@@ -19,7 +19,6 @@ const ReviewPage = () => {
   const [redirect, setRedirect] = useState(false);
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
-  const [idUserLogin, setIdUserLogin] = useState(null);
 
   useEffect(() => {
     const getUserInfoFromToken = async () => {
