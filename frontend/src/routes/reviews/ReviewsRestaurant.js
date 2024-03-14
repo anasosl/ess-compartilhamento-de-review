@@ -116,7 +116,9 @@ const ReviewsRestaurant = () => {
         {restaurant && (
             <div className="restaurants-page"> 
             <div className="restaurant">
-               
+                {restaurant.profileImage !== "Noneundefined" && <img id="restaurant-img-preview" src={`${API_BASE}/${restaurant.profileImage}`} />}
+                            
+                {restaurant.profileImage == "Noneundefined" && <img id="restaurant-img-preview" src={NoImg} />}
                 <h1>{restaurant.name}</h1>
                 <p>Nota média:</p>
                 <div>
