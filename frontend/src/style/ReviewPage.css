@@ -1,0 +1,121 @@
+.review-page-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .review-page {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .restaurant-details {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .restaurant-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .restaurant-details p {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .review-data {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .review-main-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .star-rating {
+    margin-bottom: 10px;
+  }
+  
+  .star-rating span {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  
+  .review-details p {
+    margin-bottom: 10px;
+  }
+  
+  .review-ratings p {
+    font-weight: bold;
+  }
+  
+  .review-ratings div {
+    margin-bottom: 10px;
+  }
+  
+  .review-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .simple-button,
+  .delete-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+  }
+  
+  .simple-button:hover,
+  .delete-button:hover {
+    opacity: 0.7;
+  }
+  
+  .review-voting {
+    margin-top: 20px;
+  }
+  
+  .review-voting p {
+    font-weight: bold;
+  }
+  
+  .review-voting button {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .review-return {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .review-return:hover {
+    text-decoration: underline;
+  }
+  

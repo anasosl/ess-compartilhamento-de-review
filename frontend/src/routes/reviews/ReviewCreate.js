@@ -18,23 +18,23 @@ const ReviewCreate = () => {
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
 
-    const [rating, setRating] = useState('');
+    const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(null);
     const [totalStars, setTotalStars] = useState(5);
 
-    const [sabor, setSabor] = useState('');
+    const [sabor, setSabor] = useState(0);
     const [hoverS, setHoverS] = useState(null);
     const [totalStarsS, setTotalStarsS] = useState(5);
 
-    const [atendimento, setAtendimento] = useState('');
+    const [atendimento, setAtendimento] = useState(0);
     const [hoverA, setHoverA] = useState(null);
     const [totalStarsA, setTotalStarsA] = useState(5);
 
-    const [tempoDeEspera, setTempoDeEspera] = useState('');
+    const [tempoDeEspera, setTempoDeEspera] = useState(0);
     const [hoverT, setHoverT] = useState(null);
     const [totalStarsT, setTotalStarsT] = useState(5);
 
-    const [preco, setPreco] = useState('');
+    const [preco, setPreco] = useState(0);
     const [hoverP, setHoverP] = useState(null);
     const [totalStarsP, setTotalStarsP] = useState(5);
 
@@ -94,7 +94,8 @@ const ReviewCreate = () => {
         <div>
             <form onSubmit={createNewReview}>
                 <p>Título</p>
-                <input type="text" placeholder="Coxinha Boa" 
+                <input type="text" placeholder="Coxinha Boa"
+                    id = "title" 
                     value={title} 
                     onChange={ev => setTitle(ev.target.value)}
                     required
@@ -109,9 +110,10 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="rating"
+                            id = "rating" 
                             value={currentRating}
                             onChange={() => setRating(currentRating)}
-                            required
+                            required    
                         />
                         <span
                             className="star"
@@ -135,6 +137,7 @@ const ReviewCreate = () => {
                 placeholder="Amei a coxinha..." 
                 wrap = "soft"
                 name = "text"
+                id = "text" 
                 required
                 value={text} onChange={ev => setText(ev.target.value)}
                 />
@@ -148,6 +151,7 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="sabor"
+                            id = "sabor" 
                             value={currentSabor}
                             onChange={() => setSabor(currentSabor)}
                         />
@@ -175,6 +179,7 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="atendimento"
+                            id = "atendimento" 
                             value={currentAtendimento}
                             onChange={() => setAtendimento(currentAtendimento)}
                         />
@@ -202,6 +207,7 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="tempoDeEspera"
+                            id = "tempoDeEspera" 
                             value={currentTempoDeEspera}
                             onChange={() => setTempoDeEspera(currentTempoDeEspera)}
                         />
@@ -229,6 +235,7 @@ const ReviewCreate = () => {
                         <input
                             type="radio"
                             name="preco"
+                            id = "preco" 
                             value={currentPreco}
                             onChange={() => setPreco(currentPreco)}
                         />
